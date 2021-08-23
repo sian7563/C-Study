@@ -43,13 +43,21 @@ int main()
 //        std::cout << "b2" << std::endl;
 //    std::cout << std::endl;
     
-    std::cout << "bool 에서 정수로 형 변환" << std::endl;
-    int itrue = true;
-    int ifalse = false;
+//    std::cout << "bool 에서 정수로 형 변환" << std::endl;
+//    int itrue = true;
+//    int ifalse = false;
+//
+//    std::cout << itrue << std::endl;
+//    std::cout << ifalse << std::endl;
+//    std::cout << std::endl;
     
-    std::cout << itrue << std::endl;
-    std::cout << ifalse << std::endl;
-    std::cout << std::endl;
+      std::cout << "정수에서 bool로 형 변환" << std::endl;
+      bool btrue = 100;
+      bool bfalse = 0;
+
+      std::cout << btrue << std::endl;
+      std::cout << bfalse << std::endl;
+
 
     
     return 0;
