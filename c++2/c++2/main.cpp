@@ -108,28 +108,48 @@
 //
 //int main()
 //{
-    void Swap(int& a, int& b)
-    {
-        int nTmp = a;
-        a = b;
-        b = nTmp;
-    }
+//    void Swap(int& a, int& b)
+//    {
+//        int nTmp = a;
+//        a = b;
+//        b = nTmp;
+//    }
 
     int main()
     {
-        int nX = 10, nY = 20;
+//        int nX = 10, nY = 20;
+//
+//        std::cout << "함수 호출 전"<< std::endl;
+//        std::cout << "nX : " << nX << std::endl;
+//        std::cout << "nY : " << nY << std::endl;
+//
+//        Swap(nX, nY);
+//
+//
+//        std::cout << "\n함수 호출 후" << std::endl;
+//        std::cout << "nX : " << nX << std::endl;
+//        std::cout << "nY : " << nY << std::endl;
 
-        std::cout << "함수 호출 전"<< std::endl;
-        std::cout << "nX : " << nX << std::endl;
-        std::cout << "nY : " << nY << std::endl;
+        int nList[5] = { 10, 20, 30, 40, 50 };
 
-        Swap(nX, nY);
+           
+        for (int i = 0; i < 5; i++)
+            std::cout << nList[i] << " ";
 
+        std::cout << std::endl;
+
+            
+        for (auto n : nList)
+            std::cout << n << " ";
+
+        std::cout << std::endl;
+
+           
+        for (auto &n : nList)
+            std::cout << n << " ";
+
+        std::cout << std::endl;
         
-        std::cout << "\n함수 호출 후" << std::endl;
-        std::cout << "nX : " << nX << std::endl;
-        std::cout << "nY : " << nY << std::endl;
-
     return 0;
 
 }
