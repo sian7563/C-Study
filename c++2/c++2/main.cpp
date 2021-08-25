@@ -5,12 +5,12 @@
 //  Created by kimsian on 2021/08/25.
 //
 
-#include <iostream>
-#include <typeinfo>
-
-int main()
-{
-    
+//#include <iostream>
+//#include <typeinfo>
+//
+//int main()
+//{
+//
 //    int num = 10;
 //    int num2(20);
 //    int num3(num2);
@@ -68,16 +68,52 @@ int main()
 //      delete pData;
 //      delete pNewData;
         
-        int* arr = new int[5];
+//      int* arr = new int[5];
+//
+//      for (int i = 0; i < 5; i++)
+//           arr[i] = (i + 1) * 10;
+//
+//      for (int i = 0; i < 5; i++)
+//           std::cout << arr[i] << std::endl;
+//
+//      delete[] arr;
+    
+    
+//        int nData = 10;
+//
+//
+//        int& ref = nData;
+//
+//
+//        ref = 20;
+//
+//        std::cout << nData << std::endl;
+//
+//
+//        int* pnData = &nData;
+//        *pnData = 30;
+//        std::cout << nData << std::endl;
+    
 
-        for (int i = 0; i < 5; i++)
-            arr[i] = (i + 1) * 10;
+//    return 0;
+//}
 
-        for (int i = 0; i < 5; i++)
-            std::cout << arr[i] << std::endl;
+#include <iostream>
 
-        delete[] arr;
+void TestFunc(int& rParam)
+{
+    
+    rParam = 100;
+}
 
+int main()
+{
+    int nData = 10;
+
+    TestFunc(nData);
+
+    std::cout << nData << std::endl;
 
     return 0;
+
 }
