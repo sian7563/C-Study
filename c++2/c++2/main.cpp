@@ -100,19 +100,35 @@
 
 #include <iostream>
 
-void TestFunc(int& rParam)
-{
-    
-    rParam = 100;
-}
+//void TestFunc(int& rParam)
+//{
+//
+//    rParam = 100;
+//}
+//
+//int main()
+//{
+    void Swap(int& a, int& b)
+    {
+        int nTmp = a;
+        a = b;
+        b = nTmp;
+    }
 
-int main()
-{
-    int nData = 10;
+    int main()
+    {
+        int nX = 10, nY = 20;
 
-    TestFunc(nData);
+        std::cout << "함수 호출 전"<< std::endl;
+        std::cout << "nX : " << nX << std::endl;
+        std::cout << "nY : " << nY << std::endl;
 
-    std::cout << nData << std::endl;
+        Swap(nX, nY);
+
+        
+        std::cout << "\n함수 호출 후" << std::endl;
+        std::cout << "nX : " << nX << std::endl;
+        std::cout << "nY : " << nY << std::endl;
 
     return 0;
 
