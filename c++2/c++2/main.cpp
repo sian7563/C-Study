@@ -56,19 +56,28 @@ int main()
 //    std::cout << typeid(&nums[0]).name() << std::endl;
 
    
-      int* pData = new int;
-
-       
-      int* pNewData = new int(10);
-
-      *pData = 5;
-      std::cout << *pData << std::endl;
-      std::cout << *pNewData << std::endl;
-
-      delete pData;
-      delete pNewData;
+//      int* pData = new int;
+//
+//
+//      int* pNewData = new int(10);
+//
+//      *pData = 5;
+//      std::cout << *pData << std::endl;
+//      std::cout << *pNewData << std::endl;
+//
+//      delete pData;
+//      delete pNewData;
         
-    
+        int* arr = new int[5];
+
+        for (int i = 0; i < 5; i++)
+            arr[i] = (i + 1) * 10;
+
+        for (int i = 0; i < 5; i++)
+            std::cout << arr[i] << std::endl;
+
+        delete[] arr;
+
 
     return 0;
 }
