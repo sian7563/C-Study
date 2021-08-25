@@ -47,14 +47,27 @@ int main()
 //    std::cout << f << '\t' << sizeof(f) << '\t' << typeid(f).name() << std::endl;
     
     
-    int nums[] = { 1, 2, 3 };
+//    int nums[] = { 1, 2, 3 };
+//
+//    std::cout << typeid(1).name() << std::endl;
+//    std::cout << typeid(10 + 3.2).name() << std::endl;
+//    std::cout << typeid(nums).name() << std::endl;
+//    std::cout << typeid(&nums).name() << std::endl;
+//    std::cout << typeid(&nums[0]).name() << std::endl;
 
-    std::cout << typeid(1).name() << std::endl;
-    std::cout << typeid(10 + 3.2).name() << std::endl;
-    std::cout << typeid(nums).name() << std::endl;
-    std::cout << typeid(&nums).name() << std::endl;
-    std::cout << typeid(&nums[0]).name() << std::endl;
+   
+      int* pData = new int;
 
+       
+      int* pNewData = new int(10);
+
+      *pData = 5;
+      std::cout << *pData << std::endl;
+      std::cout << *pNewData << std::endl;
+
+      delete pData;
+      delete pNewData;
+        
     
 
     return 0;
