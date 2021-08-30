@@ -54,18 +54,32 @@
 #include <iostream>
 #include <typeinfo>
 template <typename T>
-T TestFunc(T a)
+//T TestFunc(T a)
+//{
+//    std::cout << "매개변수 a : " << a
+//                  << ", type : " << typeid(a).name()  << std::endl;
+//    return a;
+//}
+//int main()
+//{
+//    std::cout << "int \t" << TestFunc(3) << std::endl;
+//    std::cout << "double \t" << TestFunc(3.3) << std::endl;
+//    std::cout << "char \t" << TestFunc('A') << std::endl;
+//    std::cout << "char* \t" << TestFunc("TestString") << std::endl;
+//
+//    return 0;
+//}
+
+T Add(T a, T b)
 {
-    std::cout << "매개변수 a : " << a
-                  << ", type : " << typeid(a).name()  << std::endl;
-    return a;
+    std::cout << typeid(a).name() << "\t";
+    return a + b;
 }
 int main()
 {
-    std::cout << "int \t" << TestFunc(3) << std::endl;
-    std::cout << "double \t" << TestFunc(3.3) << std::endl;
-    std::cout << "char \t" << TestFunc('A') << std::endl;
-    std::cout << "char* \t" << TestFunc("TestString") << std::endl;
+    std::cout << Add(3, 4) << std::endl;
+    std::cout << Add(3.3, 4.4) << std::endl;
+    std::cout << Add(3.141f, 4.456f) << std::endl;
 
     return 0;
 }
